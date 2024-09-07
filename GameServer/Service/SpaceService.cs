@@ -19,7 +19,7 @@ namespace GameServer.Service
     /// </summary>
     public class SpaceService : Singleton<SpaceService>
     {
-        
+
 
         public void Start()
         {
@@ -30,10 +30,10 @@ namespace GameServer.Service
             //位置同步请求
             MessageRouter.Instance.Subscribe<SpaceEntitySyncRequest>(_SpaceEntitySyncRequest);
 
-            
+
 
         }
-        
+
 
         public Space GetSpace(int spaceId)
         {
@@ -58,8 +58,8 @@ namespace GameServer.Service
             //计算时间差
             float dt = Math.Min(serEntity.PositionTime, 1.0f);
             //计算限额
-            float limit = serEntity.Speed * dt * 3f;
-            if(float.IsNaN(dist) || dist > limit)
+            float limit = serEntity.Speed * dt * 8f;
+            if (float.IsNaN(dist) || dist > limit)
             {
                 Log.Information("拉回：单位{0},距离{1}，阈值{2}，间隔{3}", serEntity.entityId, dist, limit, dt);
                 //拉回原位置

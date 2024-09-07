@@ -31,7 +31,7 @@
     "SID": 5,
     "Name": "篝火营地",
     "Resource": "Scene5",
-    "Kind": "副本",
+    "Kind": "场景",
     "AllowPK": 0
   }
 }
