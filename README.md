@@ -32,7 +32,7 @@
 
 ## 如何运行该demo
 
-双击该目录下的 `MMOGAME.exe` 即可运行。
+双击mygame目录下的 `MMOGAME.exe` 即可运行。
 
 ## 相关操作介绍
 
